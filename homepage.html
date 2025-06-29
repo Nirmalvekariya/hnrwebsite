@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HNR CAPITALS LLC | End-to-End IT Consultancy</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Use Inter font family */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Smooth scrolling */
+    html { 
+      scroll-behavior: smooth; 
+    }
+
+    /* Gradient overlay for hero image for better text readability */
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 20, 40, 0.6), rgba(0, 20, 40, 0.8));
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-700 bg-white">
+
+<header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-lg shadow-md z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    <a href="#home" class="text-2xl font-extrabold tracking-tight text-gray-900 hover:text-cyan-600 transition-colors">
+      <span class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">HNR CAPITALS</span>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+      <a href="#about" class="hover:text-cyan-500 transition-colors">About</a>
+      <a href="#services" class="hover:text-cyan-500 transition-colors">Services</a>
+      <a href="#expertise" class="hover:text-cyan-500 transition-colors">Expertise</a>
+      <a href="#contact" class="hover:text-cyan-500 transition-colors">Contact</a>
+    </nav>
+    <div class="hidden md:block">
+      <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-5 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition-transform hover:scale-105">Get a Quote</a>
+    </div>
+    <button class="md:hidden text-gray-800 focus:outline-none" id="nav-toggle">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex-col items-center justify-center">
+    <button id="close-menu" class="absolute top-6 right-6 text-white">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <nav class="flex flex-col space-y-8 text-center text-2xl text-white">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#expertise" class="mobile-link">Expertise</a>
+      <a href="#case-studies" class="mobile-link">Case Studies</a>
+      <a href="#contact" class="mobile-link bg-cyan-500 px-6 py-3 rounded-lg">Get a Quote</a>
+    </nav>
+  </div>
+
+  <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center hero-gradient" style="background-image:url('images/hero-background.jpg');">
+    <div class="relative z-10 text-center text-white px-6">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Empowering Growth with Next-Gen Technology</h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">From strategic roadmaps to AI-driven solutions, we deliver end-to-end IT consultancy that accelerates innovation.</p>
+      <div class="space-y-4 md:space-y-0 md:space-x-4">
+        <a href="#contact" class="inline-block bg-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-transform hover:scale-105 text-lg">Schedule a Consultation</a>
+        <a href="#services" class="inline-block bg-gray-200/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-200/30 transition-transform hover:scale-105 text-lg">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="pt-16">
+    <section id="about" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-left">
+            <h2 class="text-sm font-bold uppercase text-cyan-500 tracking-widest mb-2">Who We Are</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Your Partner in Digital Transformation</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">HNR CAPITALS LLC is a full-service IT consultancy dedicated to empowering startups and government agencies with cutting-edge technology. We partner early in your project lifecycle—aligning strategy, design, and development to create scalable, secure systems that drive measurable business outcomes.</p>
+            <p class="text-gray-600 leading-relaxed">With deep expertise across Cloud, DevOps, Data Science, and AI, we ensure every solution is built on best practices in agile delivery and rigorous security standards.</p>
+          </div>
+          <div>
+            <img src="images/about-team.jpg" alt="HNR Capitals Team collaborating in a modern office" class="rounded-lg shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold uppercase text-cyan-500 tracking-widest mb-2">What We Do</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Core Services</h3>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Strategic Planning</h4>
+            <p class="text-gray-600">We analyze your goals and deliver a clear technology roadmap that minimizes risk and maximizes ROI.</p>
+          </div>
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Custom Development</h4>
+            <p class="text-gray-600">From web apps to microservices, our engineers build robust, maintainable code tailored to your needs.</p>
+          </div>
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Cloud & DevOps</h4>
+            <p class="text-gray-600">We design, deploy, and manage scalable infrastructure on AWS, Azure, or GCP with full automation.</p>
+          </div>
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Data & Integrations</h4>
+            <p class="text-gray-600">Connect legacy systems, APIs, and big-data platforms to ensure reliable data flow and functionality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="md:order-2">
+            <h2 class="text-sm font-bold uppercase text-cyan-500 tracking-widest mb-2">Our Advantage</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">AI & Data Science Expertise</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">We leverage state-of-the-art machine-learning, NLP, and predictive analytics to transform raw data into actionable insights.</p>
+            <ul class="space-y-4 text-gray-600">
+              <li class="flex items-start"><svg class="w-6 h-6 text-cyan-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><strong>Custom ML Models:</strong> Predict behavior, optimize operations, and automate decision-making.</span></li>
+              <li class="flex items-start"><svg class="w-6 h-6 text-cyan-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><strong>NLP Solutions:</strong> Extract meaning from text, enable intelligent search, and power conversational agents.</span></li>
+              <li class="flex items-start"><svg class="w-6 h-6 text-cyan-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><strong>Predictive Dashboards:</strong> Visualize trends and anomalies to empower confident action.</span></li>
+            </ul>
+          </div>
+          <div class="md:order-1">
+            <img src="images/expertise-ai.jpg" alt="Abstract visualization of an AI neural network" class="rounded-lg shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="why" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-sm font-bold uppercase text-cyan-500 tracking-widest mb-2">Our Workflow</h2>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900">A Proven Process for Success</h3>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center md:space-x-8 lg:space-x-16 space-y-8 md:space-y-0">
+          <div class="text-center max-w-xs mx-auto">
+            <div class="mx-auto bg-cyan-100 text-cyan-600 rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mb-4">1</div>
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Discover</h4>
+            <p class="text-gray-600">We dive deep into your requirements through workshops and technical audits.</p>
+          </div>
+          <div class="text-center max-w-xs mx-auto">
+            <div class="mx-auto bg-cyan-100 text-cyan-600 rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mb-4">2</div>
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Design</h4>
+            <p class="text-gray-600">We create UX/UI prototypes, architectural blueprints, and conduct security reviews.</p>
+          </div>
+          <div class="text-center max-w-xs mx-auto">
+            <div class="mx-auto bg-cyan-100 text-cyan-600 rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mb-4">3</div>
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Develop</h4>
+            <p class="text-gray-600">Using agile sprints, we build, test, and review code for optimal performance.</p>
+          </div>
+          <div class="text-center max-w-xs mx-auto">
+            <div class="mx-auto bg-cyan-100 text-cyan-600 rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mb-4">4</div>
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Deploy & Scale</h4>
+            <p class="text-gray-600">We manage CI/CD rollout, performance tuning, and offer 24/7 monitoring.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="case-studies" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-sm font-bold uppercase text-cyan-500 tracking-widest mb-2">Client Success</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Real Results for Real Businesses</h3>
+        </div>
+        
+        <div class="relative max-w-5xl mx-auto">
+            <div id="testimonial-viewport" class="overflow-hidden">
+                <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out">
+                    <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+                        <div class="bg-gray-50 p-8 rounded-lg h-full">
+                            <blockquote class="text-gray-600 italic">
+                                “HNR transformed our legacy platform into a cloud-native solution, reducing costs by 30% and dramatically improving reliability. Their expertise was invaluable.”
+                                <div class="mt-4">
+                                    <p class="font-bold text-gray-900">Jane Smith</p>
+                                    <p class="text-sm">CTO at FinTech Innovators</p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+                        <div class="bg-gray-50 p-8 rounded-lg h-full">
+                            <blockquote class="text-gray-600 italic">
+                                “Their AI-powered dashboard gave us mission-critical insights in minutes rather than days. It was a game-changer for accelerating our decision-making.”
+                                <div class="mt-4">
+                                    <p class="font-bold text-gray-900">Raj Patel</p>
+                                    <p class="text-sm">VP of Ops at HealthData Solutions</p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+                        <div class="bg-gray-50 p-8 rounded-lg h-full">
+                            <blockquote class="text-gray-600 italic">
+                                "The custom software HNR developed for us was flawless. It integrated perfectly with our existing systems and has streamlined our entire workflow."
+                                <div class="mt-4">
+                                    <p class="font-bold text-gray-900">David Chen</p>
+                                    <p class="text-sm">Founder of ConnectLink SaaS</p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+                        <div class="bg-gray-50 p-8 rounded-lg h-full">
+                            <blockquote class="text-gray-600 italic">
+                                "As a government agency, security and compliance are non-negotiable. HNR's team navigated our complex requirements with ease and delivered on time and on budget."
+                                <div class="mt-4">
+                                    <p class="font-bold text-gray-900">Maria Rodriguez</p>
+                                    <p class="text-sm">Project Manager, Public Sector</p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                     <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+                        <div class="bg-gray-50 p-8 rounded-lg h-full">
+                            <blockquote class="text-gray-600 italic">
+                                "The DevOps pipeline they implemented cut our deployment time in half. Our developers are happier and we're pushing features faster than ever before."
+                                <div class="mt-4">
+                                    <p class="font-bold text-gray-900">Samson Greene</p>
+                                    <p class="text-sm">Head of Engineering, ShopFast</p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+                        <div class="bg-gray-50 p-8 rounded-lg h-full">
+                            <blockquote class="text-gray-600 italic">
+                                "From the initial strategic roadmap to the final product, the team's guidance was crystal clear. We finally have a tech strategy that aligns with our business goals."
+                                <div class="mt-4">
+                                    <p class="font-bold text-gray-900">Emily White</p>
+                                    <p class="text-sm">CEO of InnovateNext</p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="prev-button" class="absolute top-1/2 -translate-y-1/2 left-0 md:-left-12 bg-white/50 hover:bg-white rounded-full p-2 shadow-md transition">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button id="next-button" class="absolute top-1/2 -translate-y-1/2 right-0 md:-right-12 bg-white/50 hover:bg-white rounded-full p-2 shadow-md transition">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <section id="tech" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10">Our Technology Stack</h2>
+            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6">
+                <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="h-10 transition-transform hover:scale-125" title="Python">
+                <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" class="h-10 transition-transform hover:scale-125" title="JavaScript">
+                <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" class="h-10 transition-transform hover:scale-125" title="TypeScript">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg" alt="AWS" class="h-10 transition-transform hover:scale-125" title="AWS" style="fill:#FF9900;">
+<img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftazure.svg" alt="Azure" class="h-10 transition-transform hover:scale-125" title="Azure" style="fill:#0078D4;">
+                <img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="GCP" class="h-10 transition-transform hover:scale-125" title="GCP">
+                <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="h-10 transition-transform hover:scale-125" title="Docker">
+                <img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes" class="h-10 transition-transform hover:scale-125" title="Kubernetes">
+                <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" class="h-10 transition-transform hover:scale-125" title="TensorFlow">
+                <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" class="h-10 transition-transform hover:scale-125" title="PyTorch">
+                <img src="https://cdn.simpleicons.org/apacheairflow/017CEE" alt="Airflow" class="h-10 transition-transform hover:scale-125" title="Airflow">
+                <img src="https://cdn.simpleicons.org/apachespark/E25A1C" alt="Spark" class="h-10 transition-transform hover:scale-125" title="Spark">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-cyan-600">
+      <div class="container mx-auto px-6 py-20 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to Accelerate Your Next Project?</h2>
+        <p class="text-cyan-100 max-w-2xl mx-auto mb-8">Let's discuss how our expertise can help you achieve your technology goals. Schedule a free, no-obligation consultation today.</p>
+        <a href="#contact" class="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-cyan-50 transition-transform hover:scale-105 inline-block">Get in Touch</a>
+      </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-20">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+        <div class="md:col-span-1">
+          <h3 class="text-2xl font-bold text-white mb-4">HNR CAPITALS</h3>
+          <p>Your expert partner in building the future of technology, from startups to enterprise.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Contact Information</h3>
+          <p>1234 Innovation Dr, Suite 100<br/>Los Angeles, CA 90017</p>
+          <p class="mt-4">
+            <a href="tel:123-456-7890" class="hover:text-cyan-400">📞 (123) 456-7890</a><br/>
+            <a href="mailto:info@hnrcapitals.com" class="hover:text-cyan-400">✉️ info@hnrcapitals.com</a>
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-cyan-400" aria-label="LinkedIn">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-400" aria-label="Twitter">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.424.727-.666 1.581-.666 2.477 0 1.62.823 3.054 2.072 3.898-.764-.025-1.482-.234-2.11-.583v.06c0 2.254 1.604 4.135 3.737 4.568-.39.106-.803.163-1.227.163-.3 0-.593-.028-.877-.082.593 1.85 2.306 3.198 4.341 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.202-.005-.403-.014-.602.91-.658 1.7-1.475 2.323-2.41z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-400" aria-label="GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12 pt-8 border-t border-gray-800 text-sm text-gray-500">
+        &copy; 2025 HNR CAPITALS LLC. All rights reserved.
+      </div>
+    </footer>
+  </main>
+
+<script>
+    // --- Mobile Menu Toggle ---
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    }
+
+    navToggle.addEventListener('click', toggleMenu);
+    closeMenu.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // --- Testimonial Carousel with Manual Controls ---
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.getElementById('testimonial-track');
+      const prevButton = document.getElementById('prev-button');
+      const nextButton = document.getElementById('next-button');
+      
+      let currentIndex = 0;
+      
+      // Function to determine how many slides form a "page"
+      const getSlidesPerPage = () => {
+        return window.innerWidth >= 768 ? 2 : 1;
+      };
+
+      // Recalculates total pages and updates carousel position
+      function updateCarousel() {
+        const slides = Array.from(track.children);
+        const slidesPerPage = getSlidesPerPage();
+        const pageCount = Math.ceil(slides.length / slidesPerPage);
+
+        // Ensure currentIndex is within bounds
+        if (currentIndex >= pageCount) {
+          currentIndex = 0; // Loop to the beginning if screen resized
+        }
+
+        // Calculate the percentage to move the track
+        const transformValue = -currentIndex * 100;
+        track.style.transform = `translateX(${transformValue}%)`;
+      }
+
+      // Event listener for the "Next" button
+      nextButton.addEventListener('click', () => {
+        const slides = Array.from(track.children);
+        const slidesPerPage = getSlidesPerPage();
+        const pageCount = Math.ceil(slides.length / slidesPerPage);
+
+        currentIndex = (currentIndex + 1) % pageCount; // Loop to the beginning
+        updateCarousel();
+      });
+
+      // Event listener for the "Previous" button
+      prevButton.addEventListener('click', () => {
+        const slides = Array.from(track.children);
+        const slidesPerPage = getSlidesPerPage();
+        const pageCount = Math.ceil(slides.length / slidesPerPage);
+
+        currentIndex = (currentIndex - 1 + pageCount) % pageCount; // Loop to the end
+        updateCarousel();
+      });
+
+      // Update carousel on window resize to handle responsive changes
+      window.addEventListener('resize', updateCarousel);
+      
+      // Initial call to set the correct position on page load
+      updateCarousel();
+    });
+</script>
+</body>
+</html>
